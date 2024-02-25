@@ -1,4 +1,5 @@
 ﻿Public Class formKastutajaAken
+    'Kõigi peale sisendi textboxi on disabled'
     Private Sub Allboxes(ByVal box As Control)
         txtSisendTekst.Enabled = True
         TextBox1.Enabled = False
