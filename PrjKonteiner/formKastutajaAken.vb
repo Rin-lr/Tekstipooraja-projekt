@@ -7,6 +7,8 @@
         txtValjundTekst1.Enabled = False
         txtValjundTekst2.Enabled = False
         Tlen.Enabled = False
+        btnStopp.Enabled = False
+        koikM.Enabled = False
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -92,12 +94,17 @@
         Return letterCount
     End Function
 
+    'koikM on box
+
     Private Sub txtSisendTekst_TextChanged(sender As Object, e As EventArgs) Handles txtSisendTekst.TextChanged
         'Get the input
         Dim value As String = txtSisendTekst.Text
 
         'Calculate the count of specific letters using the function
         Dim letter As Integer = Counter(value)
+
+        'koikM
+        koikM.Text = txtSisendTekst.Text.Length
 
         'Output (TLen)
         Tlen.Text = letter.ToString()
